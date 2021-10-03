@@ -1,0 +1,138 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+
+	background-size: cover;
+}
+
+.container {
+	display: grid;
+	justify-items: center;
+	align-items: center;
+	grid-template: 1fr 1fr / 1fr;
+
+	width: 100vw;
+	height: 100vh;
+}
+
+.back {
+	width: 100vw;
+	height: 100vh;
+
+	background-color: #000;
+
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 0;
+	opacity: 0;
+	transition: all 1s ease 0s;
+}
+
+.title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 100vw;
+	height: 20vh;
+
+	background-color: transparent;
+
+	color: #FFF;
+	font: normal calc( 3vw + 9vh ) 等线;
+}
+
+a {
+	color: #FFF;
+	font: normal calc( 2vw + 6vh) 等线;
+	text-decoration: none;
+
+	box-shadow: 0 0 0 #FFF;
+
+	transform: translateY( 0 );
+	transition: all .1s ease 0s;
+}
+
+a:hover {
+	transform: translateY( -10px );
+}
+
+.subtitle {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 100vw;
+	height: 100vh;
+
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	z-index: -100;
+
+	transform: translate( -50%, -50% );
+
+	color: #FFF;
+	font: normal calc( 4vw + 12vh ) 等线;
+
+	opacity: 0;
+
+	transition: all 2s ease 0s;
+}
+
+canvas {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: -100;
+}
+
+.content {
+	display: flex;
+	justify-content: center;
+	align-items: space-evenly;
+	flex-flow: row wrap;
+
+	width: 90vw;
+	height: 90vh;
+
+	position: absolute;
+	left: 50%;
+	top: 50%;
+
+	transform: translate( -50%, -50% );
+
+	opacity: 0;
+
+	z-index: -100;
+
+	transition: opacity 3s ease 1s;
+}
+
+.card {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 90vw;
+
+	color: #FFF;
+	font: normal calc( 2vw + 6vh ) 等线;
+}
+
+.time {
+	position: fixed;
+	right: 0;
+	top: 0;
+
+	color: #FFF;
+	font: normal calc( 1vw + 3vh ) Consolas;
+	
+	z-index: 100;
+}

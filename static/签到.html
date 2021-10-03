@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html, charset=utf-8">
+	<title>:: 语文签到 ::</title>
+	<link rel="stylesheet" type="text/css" href="../css/layout.css">
+</head>
+<body>
+	<div class="container">
+		<div class="back"></div>
+		<div class="title"></div>
+		<script type="text/javascript">
+			document.querySelector(".title").innerHTML = `语文签到${new Date().getMonth() + 1}.${new Date().getDate()}`;
+		</script>
+		<a href="javascript: start()">开始</a>
+		<div class="subtitle">:: 开始 ::</div>
+		<canvas width="1280" height="800"></canvas>
+	</div>
+</body>
+<script type="text/javascript" src="../js/data-check-in.js"></script>
+<script type="text/javascript" src="../js/check-in.js"></script>
+<script type="text/javascript">
+	document.body.style.backgroundImage = `url(../img/${ Math.floor( Math.random() * 10 ) + 1 }.jpg)`;
+</script>
+</html>

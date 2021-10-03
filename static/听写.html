@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html, charset=utf-8">
+	<title>:: 语文听写 ::</title>
+	<link rel="stylesheet" type="text/css" href="../css/layout.css">
+</head>
+<body>
+	<div class="container">
+		<div class="back"></div>
+		<div class="title"></div>
+		<script type="text/javascript">
+			document.querySelector(".title").innerHTML = `语文听写${new Date().getMonth() + 1}.${new Date().getDate()}`;
+		</script>
+		<a href="javascript: start()">开始</a>
+		<div class="subtitle">:: 开始 ::</div>
+		<div class="content"></div>
+		<div class="time"></div>
+		<script type="text/javascript">
+			function two( num ){
+				return num >= 10 ? num : `0${num}`;
+			}
+			const timer = setInterval( function(){
+				document.querySelector(".time").innerHTML = `${ two( new Date().getHours() ) }:${ two( new Date().getMinutes() ) }:${ two( new Date().getSeconds() ) }`;
+			}, 1000 );
+		</script>
+	</div>
+</body>
+<script type="text/javascript" src="../js/data-dictation.js"></script>
+<script type="text/javascript" src="../js/dictation.js"></script>
+<script type="text/javascript">
+	document.body.style.backgroundImage = `url(../img/${ Math.floor( Math.random() * 10 ) + 1 }.jpg)`;
+</script>
+</html>

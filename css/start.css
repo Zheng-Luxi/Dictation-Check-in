@@ -1,0 +1,65 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+
+	background-size: cover;
+}
+
+.container {
+	display: grid;
+	grid-template: 1fr / 1fr 1fr;
+	justify-items: center;
+	align-items: center;
+
+	width: 100vw;
+	height: 100vh;	
+}
+
+.card {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 75%;
+	height: 75%;
+
+	box-shadow: 0 10px 10px #333;
+
+	transform: translateY( 0 );
+	transition: all .2s ease 0s
+}
+
+.card:hover {
+	transform: translateY( -20px );
+	box-shadow: 0 15px 15px #333;
+	border-radius: 10%
+}
+
+.dictation {
+	background-color: rgba( 102, 153, 205, .5 );
+}
+
+.dictation:hover {
+	background-color: rgba( 102, 153, 205, .8 );
+}
+
+.check-in {
+	background-color: rgba( 153, 221, 170, .5 );
+}
+
+.check-in:hover {
+	background-color: rgba( 153, 221, 170, .8 );
+}
+
+a {
+	color: #FFF;
+	font: normal calc( 3vw + 9vh ) 等线;
+	text-decoration: none;
+
+	transition: all .5s ease 0s;
+}
